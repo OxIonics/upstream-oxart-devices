@@ -1,0 +1,9 @@
+[flake8]
+ignore =
+    # Line breaks before binary operators (Black)
+    W503,
+    # Star imports are common in idiomatic ARTIQ code
+    F403, F405
+
+max-line-length=88
+per-file-ignores = __init__.py:F401
