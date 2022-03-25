@@ -12,3 +12,4 @@ jobs:
     uses: OxIonics/common-workflows/.github/workflows/test_flake_black.yml@master
     secrets:
       GHA_TOKEN: ${{ secrets.GHA_TOKEN }}
+      PACKAGE_NAME: .
