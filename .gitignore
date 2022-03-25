@@ -1,3 +1,6 @@
+# GitHub's Python template
+# ========================
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +130,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# More common stuff
+# =================
+
+# PyCharm files
+/.idea/
+
+# Artiq stuff
+/binaries/
+/dataset_db.pyon
+/results/
+
