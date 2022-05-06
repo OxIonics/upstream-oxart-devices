@@ -19,10 +19,12 @@ merging in this project allows it to be explict.
 
 The Lady Jessica bot looks for repositories that has a in their pyproject.toml
 section like:
+
 ```toml
 [tool.lady_jessica]
 parent_branch = "master"
 ```
+
 And makes pull requests to those repositories every time the selected
 branch in the repo is pushed to merging that branch in to the default
 branch of that repo.
