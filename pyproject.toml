@@ -30,7 +30,7 @@ format-jinja = "{{ base }}.{{ distance }}+g{{ commit }}"
 pattern = "^(?P<base>\\d+(\\.\\d+)*)"
 
 [tool.lady_jessica]
-parent_branch = "parent_python"
+parent_branch = "parent_python_third-party"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
