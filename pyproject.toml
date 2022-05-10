@@ -17,6 +17,9 @@ default = true
 python = "~3.8"
 
 [tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+pytest = "^6.2.5"
+black = "22.3.0"
 pre-commit = "^2.17.0"
 
 [tool.poetry-dynamic-versioning]
@@ -27,7 +30,7 @@ format-jinja = "{{ base }}.{{ distance }}+g{{ commit }}"
 pattern = "^(?P<base>\\d+(\\.\\d+)*)"
 
 [tool.lady_jessica]
-parent_branch = "parent"
+parent_branch = "parent_python"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
@@ -35,3 +38,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poe.tasks]
 pre-commit-install="pre-commit install"
+fmt = "black ."
+fmt-test = "black --check ."
+test = "pytest"
+flake = "flake8 ."
