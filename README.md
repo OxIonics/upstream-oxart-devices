@@ -3,9 +3,15 @@
 Base project that can be merged in other projects to provide common config.
 Merge it in to the project with:
 ```
+git checkout -b merge_base_project
 git remote add base git@github.com:OxIonics/base_project.git
 git fetch base
-git merge --allow-unrelated-histories base/master
+git merge --allow-unrelated-histories base/parent_python  # Or other more appropriate branch
+get restore --ours poetry.lock
+# Fix merge conflicts
+poetry update
+git merge --continue
+git push -u origin HEAD
 ```
 
 You'll normally encounter some conflicts the first time you do this. For the 
@@ -40,4 +46,5 @@ changes to a branch in to all branches that it's name matches up to the last
 underscore. E.g. Lady Jessica
 will try to merge changes to `parent_python` in to `parent_python_third-party`
 and `parent_python_experiments`, but not to `parent_python_unusual_type`. 
+
 
